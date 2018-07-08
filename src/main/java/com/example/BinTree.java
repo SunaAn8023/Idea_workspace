@@ -14,7 +14,7 @@ public class BinTree {
        data=c;
     }
 
-    //层次遍历方法
+    //层次遍历方法 一层一层遍历
     public static  void cenci(BinTree node){
         if (node==null){
             return;
@@ -41,7 +41,35 @@ public class BinTree {
 
     }
 
+    //先序遍历 根，左，右 （一定要左节点遍历完再遍历右节点）
+    public static void  pre(BinTree node){
+        if (node==null){
+            return;
+        }
+        System.out.println(node.data);
+        pre(node.lchild);
+        pre(node.rchild);
+    }
 
+    //中序遍历 左，根，右
+    public  static  void  min(BinTree node){
+        if (node==null){
+            return;
+        }
+        min(node.lchild);
+        System.out.println(node.data);
+        min(node.rchild);
+    }
+
+    //后序遍历 左，右，根
+    public  static  void  last(BinTree node){
+        if (node==null){
+            return;
+        }
+        last(node.lchild);
+        last(node.rchild);
+        System.out.println(node.data);
+    }
 
     public static  void  main(String[] args){
         BinTree t1=new BinTree(12);
@@ -51,7 +79,6 @@ public class BinTree {
         BinTree t5=new BinTree(15);
         BinTree t6=new BinTree(17);
         BinTree t7=new BinTree(19);
-        BinTree t8=new BinTree(20);
 
         //构成二叉树 t1\t2\t3
         t1.lchild=t2;
@@ -65,6 +92,8 @@ public class BinTree {
 
        //调用二叉树层次遍历方法
         BinTree.cenci(t1);
-
+        //BinTree.pre(t1);
+        //BinTree.min(t1);
+        //BinTree.last(t1);
     }
 }
