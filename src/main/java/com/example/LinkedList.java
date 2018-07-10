@@ -41,7 +41,7 @@ public class LinkedList {
             return;
         }
         System.out.println(node.data);
-        lianbiaobl(node);
+        lianbiaobl(node.nextNode);
 
     }
 }
