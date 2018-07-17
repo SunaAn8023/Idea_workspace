@@ -36,12 +36,14 @@ public class LinkedList {
         lianbiaobl(first);
 
     }
+
+//    public static LinkedList initList()
+
     public static void lianbiaobl(LinkedList node){
         if(node==null){
             return;
         }
         System.out.println(node.data);
         lianbiaobl(node.nextNode);
-
     }
 }
