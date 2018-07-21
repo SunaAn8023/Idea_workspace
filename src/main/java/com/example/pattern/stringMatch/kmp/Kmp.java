@@ -69,7 +69,7 @@ public class Kmp {
 
 
     public static void main(String[] args) {
-        int get = index("abcdef","cd");
+        int get = index("abcdef","cde");
         System.out.println(get);
     }
 }
