@@ -7,5 +7,18 @@ package com.example.pattern.test;
  */
 public class A {
 
-    int a;
+
+    public static int sheep(int age){
+        if(age == 1||age==3)
+            return 1;
+        if(age>=5)
+            return 0;
+        else
+            return 2;
+
+    }
+
+    public static void main(String[] args) {
+
+    }
 }

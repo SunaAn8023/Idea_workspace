@@ -1,4 +1,4 @@
-package com.example.pattern.simpleFactory;
+package com.example.pattern.linkedlist.simpleFactory;
 
 /**
  * author:zwy

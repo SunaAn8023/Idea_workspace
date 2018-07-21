@@ -1,4 +1,4 @@
-package com.example.pattern.simpleFactory;
+package com.example.pattern.linkedlist.simpleFactory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
