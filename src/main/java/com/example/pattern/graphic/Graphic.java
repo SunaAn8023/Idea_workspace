@@ -22,25 +22,5 @@ public class Graphic {
         return array;
     }
 
-    //深度遍历
-    public static void DFS(int[][] matrix,int x){
-
-        int[] array = matrix[x];
-
-        for (int i = 0; i < array.length; i++) {
-            if(array[i]==1){
-                System.out.println("访问:"+(i+1)+"点");
-                for (int j = 0; j < matrix[i].length; j++) {
-                    matrix[i][j] = 2;
-                }
-                DFS(matrix,i);
-            }
-        }
-
-    }
-
-    public static void main(String[] args) {
-        DFS(matrix(),1);
-    }
 
 }

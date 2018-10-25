@@ -1,11 +1,10 @@
-package com.example.pattern.binarytree;
+package com.example.pattern.tree.binarytree;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.concurrent.LinkedBlockingDeque;
 
 /**
  * author:zwy

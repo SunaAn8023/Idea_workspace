@@ -1,6 +1,6 @@
-package com.example.pattern.binarytree;
+package com.example.pattern.tree.binarytree;
 
-import com.example.pattern.binarytree.strategy.*;
+import com.example.pattern.tree.binarytree.strategy.*;
 
 /**
  * author:zwy
