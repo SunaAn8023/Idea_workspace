@@ -14,10 +14,11 @@ import java.util.Queue;
  */
 public class Tree {
 
-    private Integer data;
-    private Tree leftchild;
-    private Tree rightchild;
-    private boolean flag;
+    private Integer data;       //节点数据
+    private Tree leftchild;     //左子节点
+    private Tree rightchild;    //右子节点
+    private boolean flag;       //
+    private String otherData;   // 其他数据
 
     private final static Logger logger = LoggerFactory.getLogger(Tree.class);
 
@@ -53,6 +54,14 @@ public class Tree {
         this.flag = flag;
     }
 
+    public String getOtherData() {
+        return otherData;
+    }
+
+    public void setOtherData(String otherData) {
+        this.otherData = otherData;
+    }
+
     private Tree() {
     }
 
@@ -74,8 +83,11 @@ public class Tree {
         queue.offer(root);
 
         for (int i = 0; i < array.length; i++) {
-            Tree node = queue.poll();
 
+            if (array[i]==0)
+                continue;
+
+            Tree node = queue.poll();
             node.setData(array[i]);
             node.setFlag(true);
 
@@ -90,6 +102,47 @@ public class Tree {
 
         }
         return root;
+    }
+
+    public static Tree initTree(int[] array,String[] datas){
+        if(array.length==0){
+            logger.info("数据为空");
+            return null;
+        }
+
+        Queue<Tree> queue = new LinkedList<>();
+        Tree root = new Tree();
+        queue.offer(root);
+
+        for (int i = 0; i < array.length; i++) {
+            Tree node = queue.poll();
+
+            node.setData(array[i]);
+            node.setOtherData(datas[i]);
+            node.setFlag(true);
+
+            Tree leftChild = new Tree();
+            Tree rightChild = new Tree();
+
+            node.setLeftchild(leftChild);
+            node.setRightchild(rightChild);
+
+            queue.offer(leftChild);
+            queue.offer(rightChild);
+
+        }
+        return root;
+    }
+
+    @Override
+    public String toString() {
+        return "Tree{" +
+                "data=" + data +
+                ", leftchild=" + leftchild +
+                ", rightchild=" + rightchild +
+                ", flag=" + flag +
+                ", otherData='" + otherData + '\'' +
+                '}';
     }
 
     public static void main(String[] args) {

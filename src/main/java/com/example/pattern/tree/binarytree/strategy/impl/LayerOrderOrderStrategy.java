@@ -32,8 +32,9 @@ public class LayerOrderOrderStrategy implements IOrderStrategy {
 
         while (queue.size()>0){
             Tree node = queue.poll();
-            if(node==null||node.getData()==null||node.getData()==0)
+            if(node==null||node.getData()==null||node.getData().equals(0)) {
                 continue;
+            }
 
             if(node.getData().equals(-1)){
 
