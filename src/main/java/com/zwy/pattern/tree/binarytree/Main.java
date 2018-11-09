@@ -1,10 +1,12 @@
 package com.zwy.pattern.tree.binarytree;
 
+import com.zwy.pattern.linkedlist.simpleFactory.factory.LinkedList;
 import com.zwy.pattern.tree.binarytree.BST.ISearchStrategy;
 import com.zwy.pattern.tree.binarytree.BST.impl.SearchAntiRecursionStrategy;
-import com.zwy.pattern.tree.binarytree.strategy.impl.*;
+import com.zwy.pattern.tree.binarytree.orderStrategy.impl.*;
+import com.zwy.pattern.tree.binarytree.threadTree.bridge.ThreadBridge;
 import com.zwy.pattern.tree.binarytree.treeEntity.Tree;
-import com.zwy.pattern.tree.binarytree.strategy.*;
+import com.zwy.pattern.tree.binarytree.orderStrategy.*;
 
 /**
  * author:zwy
@@ -15,7 +17,8 @@ public class Main {
 
     public static void main(String[] args) {
 //        search();
-        order();
+//        order();
+        thread();
     }
 
     /**
@@ -34,6 +37,16 @@ public class Main {
         Tree tree1 = searchAntiRecursionStrategy.addNode(tree,node);
         orderStrategy.operate(tree1);
 
+    }
+
+    /**
+     * 二叉树线索化
+     */
+    private static void thread(){
+        Tree tree = Tree.initTree(new int[]{1,2,3,0,4,0,5,0,0,6,0});
+        ThreadBridge bridge = new ThreadBridge();
+        LinkedList linkedList = bridge.threadBridge(tree,new PreOrderOrderStrategy());
+        linkedList.ergodic(linkedList);
     }
 
     /**
