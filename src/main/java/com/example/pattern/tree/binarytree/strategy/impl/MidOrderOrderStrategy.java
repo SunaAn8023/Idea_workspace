@@ -1,6 +1,7 @@
-package com.example.pattern.tree.binarytree.strategy;
+package com.example.pattern.tree.binarytree.strategy.impl;
 
-import com.example.pattern.tree.binarytree.Tree;
+import com.example.pattern.tree.binarytree.treeEntity.Tree;
+import com.example.pattern.tree.binarytree.strategy.IOrderStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,9 +11,9 @@ import org.slf4j.LoggerFactory;
  * Time:11:19
  * 中序遍历
  */
-public class MidOrderStrategy implements IStrategy{
+public class MidOrderOrderStrategy implements IOrderStrategy {
 
-    private static final Logger logger = LoggerFactory.getLogger(MidOrderStrategy.class);
+    private static final Logger logger = LoggerFactory.getLogger(MidOrderOrderStrategy.class);
 
     @Override
     public void operate(Tree tree) {

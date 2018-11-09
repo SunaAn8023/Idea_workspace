@@ -1,6 +1,9 @@
 package com.example.pattern.tree.binarytree;
 
+import com.example.pattern.tree.binarytree.treeEntity.Tree;
 import com.example.pattern.tree.binarytree.strategy.*;
+import com.example.pattern.tree.binarytree.strategy.impl.PostOrderAntiRecursionOrderStrategy;
+import com.example.pattern.tree.binarytree.strategy.impl.PostOrderOrderStrategy;
 
 /**
  * author:zwy
@@ -12,25 +15,25 @@ public class Main {
     public static void main(String[] args) {
         Tree tree = Tree.initTree(new int[]{1,2,3,0,4,0,5,0,0,6,0});
 
-//        IStrategy preOrder = new PreOrderStrategy();
+//        IOrderStrategy preOrder = new PreOrderOrderStrategy();
 //        preOrder.operate(tree);
 //
-        IStrategy postOrder = new PostOrderStrategy();
+        IOrderStrategy postOrder = new PostOrderOrderStrategy();
         postOrder.operate(tree);
 //
-//        IStrategy midOrder = new MidOrderStrategy();
+//        IOrderStrategy midOrder = new MidOrderOrderStrategy();
 //        midOrder.operate(tree);
 
-//        IStrategy layerOrder = new LayerOrderStrategy();
+//        IOrderStrategy layerOrder = new LayerOrderOrderStrategy();
 //        layerOrder.operate(tree);
 
-//        IStrategy preOrderAnti = new PreOrderAntiRecursionStrategy();
+//        IOrderStrategy preOrderAnti = new PreOrderAntiRecursionOrderStrategy();
 //        preOrderAnti.operate(tree);
 
-//        IStrategy midOrderAnti = new MidOrderAntiRecursionStrategy();
+//        IOrderStrategy midOrderAnti = new MidOrderAntiRecursionOrderStrategy();
 //        midOrderAnti.operate(tree);
 
-        IStrategy postOrderAnti = new PostOrderAntiRecursionStrategy();
+        IOrderStrategy postOrderAnti = new PostOrderAntiRecursionOrderStrategy();
         postOrderAnti.operate(tree);
     }
 }

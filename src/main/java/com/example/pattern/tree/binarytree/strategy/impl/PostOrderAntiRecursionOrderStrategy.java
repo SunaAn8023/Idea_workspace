@@ -1,6 +1,7 @@
-package com.example.pattern.tree.binarytree.strategy;
+package com.example.pattern.tree.binarytree.strategy.impl;
 
-import com.example.pattern.tree.binarytree.Tree;
+import com.example.pattern.tree.binarytree.treeEntity.Tree;
+import com.example.pattern.tree.binarytree.strategy.IOrderStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,9 +13,9 @@ import java.util.Stack;
  * Time:16:32
  * 后序遍历非递归算法
  */
-public class PostOrderAntiRecursionStrategy implements IStrategy{
+public class PostOrderAntiRecursionOrderStrategy implements IOrderStrategy {
 
-    private final static Logger logger = LoggerFactory.getLogger(PostOrderAntiRecursionStrategy.class);
+    private final static Logger logger = LoggerFactory.getLogger(PostOrderAntiRecursionOrderStrategy.class);
 
     @Override
     public void operate(Tree tree) {

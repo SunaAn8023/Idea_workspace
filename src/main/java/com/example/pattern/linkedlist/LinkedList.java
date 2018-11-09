@@ -1,4 +1,4 @@
-package com.example;
+package com.example.pattern.linkedlist;
 
 //链表：单链表与双链表的构建与插入节点
 public class LinkedList {

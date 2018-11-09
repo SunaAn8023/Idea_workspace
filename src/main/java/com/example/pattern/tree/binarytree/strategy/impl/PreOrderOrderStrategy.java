@@ -1,6 +1,7 @@
-package com.example.pattern.tree.binarytree.strategy;
+package com.example.pattern.tree.binarytree.strategy.impl;
 
-import com.example.pattern.tree.binarytree.Tree;
+import com.example.pattern.tree.binarytree.treeEntity.Tree;
+import com.example.pattern.tree.binarytree.strategy.IOrderStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,9 +11,9 @@ import org.slf4j.LoggerFactory;
  * Time:11:12
  * 先序遍历
  */
-public class PreOrderStrategy implements IStrategy{
+public class PreOrderOrderStrategy implements IOrderStrategy {
 
-    private final static Logger logger = LoggerFactory.getLogger(PreOrderStrategy.class);
+    private final static Logger logger = LoggerFactory.getLogger(PreOrderOrderStrategy.class);
 
     @Override
     public void operate(Tree tree) {

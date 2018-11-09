@@ -1,4 +1,4 @@
-package com.example;
+package com.example.pattern.tree.binarytree.others;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
