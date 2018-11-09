@@ -24,4 +24,6 @@ public interface ISearchStrategy {
      * @param node  节点
      */
     Tree addNode(Tree tree,Tree node);
+
+
 }

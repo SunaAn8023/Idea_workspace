@@ -1,4 +1,6 @@
 # Idea_workspace
+环境:jdk1.8 maven3.5 
+IDE:idea
 日常java小作业
 
 目前有 链表 二叉树 kmp算法
